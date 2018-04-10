@@ -355,7 +355,7 @@ public class DataHandler {
                     nextDay.add(nextDay.DAY_OF_MONTH, 1);
                     int newDayOfWeek = nextDay.get(nextDay.DAY_OF_WEEK);
                 
-                    for (int i = 0; i < recurDays.length; i++) {
+                    for (int i = 1; i < recurDays.length; i++) {
                         //If the calendar is set to a day of the week that the
                         //appt recurs on then return that day.
                         if (recurDays[i] == newDayOfWeek) {

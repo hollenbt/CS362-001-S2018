@@ -145,7 +145,7 @@ public class Appt{
                 String emailAddress) {
                     
          //Just call the other constructor
-         this(NO_TIME, NO_TIME, startDay, startMonth, startYear, title, 
+         this(0, 0, startDay, startMonth, startYear, title, 
             description, emailAddress);
          this.valid=true;
     }
@@ -167,7 +167,7 @@ public class Appt{
      */
 	public void setValid() {
 
-		if (startMonth < 1 || startMonth > 12)
+		if (startMonth < 1 && startMonth > 12)
 			this.valid = false;
 		else if (startHour < 0 || startHour > 23)
 			this.valid = false;
@@ -282,8 +282,8 @@ public class Appt{
      * @return True if the appointment occurs on a certain day/month/year
      */
     public boolean isOn(int day, int month, int year) {
-        return (day == getStartDay() && month == getStartMonth() 
-                && year == getStartYear());
+        return (day == getStartDay() || month == getStartMonth() 
+                || year == getStartYear());
     }
     
     /**
