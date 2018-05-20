@@ -1,7 +1,0 @@
-calendar\CalDay.class
-calendar\DataHandler.class
-calendar\CalendarUtil.class
-calendar\Appt.class
-calendar\CalendarMain.class
-calendar\XmlParserErrorHandler.class
-calendar\DateOutOfRangeException.class
